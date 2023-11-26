@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Alert</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f0f0f0;">
+
+<div style="padding: 20px; background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center;">
+    {% if messages %}
+        <div class="alert alert-secondary" id="alertDiv1" style="
+            z-index: 2000;
+            margin-top: 20px; /* Adjust margin as needed */
+            background: #555353;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            opacity: 1; /* Adjust opacity to show */
+            ">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+    {% endif %}
+    <a href="/" style="text-decoration: none; cursor:pointer"><button style="margin:20px 0px;  border:none; width:100px; height:50px; font-size:18px;">Home</button></a>
+
+</div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Alert</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f0f0f0;">
+
+<div style="padding: 20px; background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center;">
+    {% if messages %}
+        {% for result in messages %}
+            <div class="alert alert-secondary" id="alertDiv1" style="z-index:2000;
+                margin-top:180px;
+                position:fixed;
+                right:10%;
+                background:#555353;
+                color:#fff;
+                font-size:16px;
+                border:none;
+                opacity:0;
+                ">
+                {{ result }}
+            </div>
+        {% endfor %}
+    {% endif %} 
+</div>
+
+</body>
+</html> -->
