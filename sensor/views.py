@@ -43,7 +43,7 @@ def stsensorinput(request):
                 )
 
                 return render(request, "alart.html")
-            elif request.POST.get("stinput") == '2':
+            elif request.POST.get("stinput") == '0':
                 messages.success(request, "No fall detected, sleeping position mode!")
                 account_sid = 'AC6d07168a52acba179613c8abdc7ffd17'
                 auth_token = '5726eb72936b2fcd6866f576ab6a66b6'
